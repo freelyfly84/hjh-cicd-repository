@@ -8,5 +8,13 @@ files:
 hooks:
   ApplicationStop:
     - location: Scripts/kill_process.sh
+      timeout: 300
+      runas: root
+  BeforeInstall:
+    - location: Scripts/remove_before.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
     - location: Scripts/run_process.sh
+      timeout: 300
+      runas: root
