@@ -8,9 +8,5 @@ files:
 hooks:
   ApplicationStop:
     - location: Scripts/kill_process.sh
-      timeout: 300
-      runas: root
   ApplicationStart:
     - location: Scripts/run_process.sh
-      timeout: 300
-      runas: root
